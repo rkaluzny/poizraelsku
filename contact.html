@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Skontaktuj się z nami - Po Izraelsku.">
+  <meta name="keywords" content="kontakt, Po Izraelsku, email, wiadomość">
+  <meta property="og:title" content="Kontakt - Po Izraelsku">
+  <meta property="og:description" content="Skontaktuj się z nami.">
+  <link rel="stylesheet" href="static/style.css">
+  <link rel="shortcut icon" href="static/images/logo.svg" type="image/x-icon">
+  <script src="static/script.js" defer></script>
+  <script src="static/animations.js" defer></script>
+  <title>Po Izraelsku - Kontakt</title>
+</head>
+<body>
+  <nav>
+    <div class="nav-top">
+      <a class="nav-logo" href="index.html"><h1>Po <img src="static/images/logo.svg" alt=""> Izraelsku</h1></a>
+      <div class="nav-toggle" onclick="toggleNav()">
+        <img class="nav-open" src="static/images/menu.svg" alt="Menu">
+        <img class="nav-close" src="static/images/close.svg" alt="Zamknij">
+      </div>
+    </div>
+    <ul class="nav-links">
+      <li style="animation: topAnim 0.5s forwards ease-in-out;"><a class="link-item" href="index.html">HOME</a></li>
+      <li style="animation: topAnim 0.5s forwards ease-in-out;"><a class="link-item" href="blog/index.html">BLOG</a></li>
+      <li class="logo" style="animation: topAnim 0.5s forwards ease-in-out;"><a href="index.html"><h1>Po <img src="static/images/logo.svg" alt=""> Izraelsku</h1></a></li>
+      <li style="animation: topAnim 0.5s forwards ease-in-out;"><a class="link-item" href="about-us.html">O NAS</a></li>
+      <li style="animation: topAnim 0.5s forwards ease-in-out;"><a class="link-item current-page" href="contact.html">KONTAKT</a></li>
+    </ul>
+  </nav>
+  <header style="background-color: rgba(0, 0, 0, 0.5); justify-content: center">
+    <div class="img-holder">
+      <img class="background-img" src="static/images/background-img.webp" alt="">
+    </div>
+  </header>
+  <main>
+    <section id="contact">
+      <h1>Skontaktuj się z nami:</h1>
+      <form action="contact.html" method="post" onsubmit="alert('Formularz kontaktowy jest wyłączony w wersji statycznej. Napisz na adres email.');return false;">
+        <label for="email">Twój E-mail:</label>
+        <input type="email" id="email" name="email" required>
+        <label for="name">Twoje imię i nazwisko:</label>
+        <input type="text" id="name" name="name" required>
+        <label for="message">Wiadomość:</label>
+        <textarea id="message" name="message" required></textarea>
+        <button type="submit">WYŚLIJ</button>
+      </form>
+      <p style="margin-top: 20px; text-align: center;">
+        Napisz do nas: <a href="mailto:robin.jerome.kaluzny@gmail.com">robin.jerome.kaluzny@gmail.com</a>
+      </p>
+    </section>
+  </main>
+</body>
+</html>
