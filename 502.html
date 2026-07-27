@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pl">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,22 +9,39 @@
   <script src="static/script.js" defer></script>
   <script src="static/animations.js" defer></script>
   <title>502 Bad Gateway - Po Izraelsku</title>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-7XY309HR13"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-7XY309HR13');
+  </script>
 </head>
+
 <body>
   <nav>
     <div class="nav-top">
-      <a class="nav-logo" href="index.html"><h1>Po <img src="static/images/logo.svg" alt=""> Izraelsku</h1></a>
+      <a class="nav-logo" href="index.html">
+        <h1>Po <img src="static/images/logo.svg" alt=""> Izraelsku</h1>
+      </a>
       <div class="nav-toggle" onclick="toggleNav()">
         <img class="nav-open" src="static/images/menu.svg" alt="Menu">
         <img class="nav-close" src="static/images/close.svg" alt="Zamknij">
       </div>
     </div>
     <ul class="nav-links">
-      <li style="animation: topAnim 0.5s forwards ease-in-out;"><a class="link-item current-page" href="index.html">HOME</a></li>
-      <li style="animation: topAnim 0.5s forwards ease-in-out;"><a class="link-item" href="blog/index.html">BLOG</a></li>
-      <li class="logo" style="animation: topAnim 0.5s forwards ease-in-out;"><a href="index.html"><h1>Po <img src="static/images/logo.svg" alt=""> Izraelsku</h1></a></li>
+      <li style="animation: topAnim 0.5s forwards ease-in-out;"><a class="link-item current-page"
+          href="index.html">HOME</a></li>
+      <li style="animation: topAnim 0.5s forwards ease-in-out;"><a class="link-item" href="blog/index.html">BLOG</a>
+      </li>
+      <li class="logo" style="animation: topAnim 0.5s forwards ease-in-out;"><a href="index.html">
+          <h1>Po <img src="static/images/logo.svg" alt=""> Izraelsku</h1>
+        </a></li>
       <li style="animation: topAnim 0.5s forwards ease-in-out;"><a class="link-item" href="about-us.html">O NAS</a></li>
-      <li style="animation: topAnim 0.5s forwards ease-in-out;"><a class="link-item" href="contact.html">KONTAKT</a></li>
+      <li style="animation: topAnim 0.5s forwards ease-in-out;"><a class="link-item" href="contact.html">KONTAKT</a>
+      </li>
     </ul>
   </nav>
   <header style="background-color: rgba(0,0,0,0.5); justify-content: center">
@@ -36,7 +54,7 @@
       <h1 style="text-align:center;padding:100px 20px;">Błąd 502: Bad Gateway</h1>
     </section>
   </main>
-    <footer>
+  <footer>
     <a href="https://www.facebook.com/profile.php?id=61578940545874" target="_blank" rel="noopener">
       <img loading="lazy" src="./static/images/facebook.png" alt="Facebook" />
     </a>
@@ -47,4 +65,5 @@
     <p>&copy; 2026 Jaqueline and Robin Kaluzny. All Rights Reserved.</p>
   </footer>
 </body>
+
 </html>
