@@ -1,220 +1,171 @@
 <!doctype html>
 <html lang="pl">
-  <head>
-    <meta charset="UTF-8" />
-    <meta
-      name="description"
-      content="Piszemy artykuły na temat Izraela, Biblii i różne świadectwa. Blog Po Izraelsku - wiara, Biblia, Izrael i język hebrajski."
-    />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="keywords"
-      content="Izrael, Biblia, świadectwa, Jezus, wiara, hebrajski, Po Izraelsku, chrześcijaństwo"
-    />
-    <meta name="author" content="Po Izraelsku" />
-    <meta
-      property="og:title"
-      content="Po Izraelsku - Blog o Izraelu, Biblii i Świadectwach"
-    />
-    <meta
-      property="og:description"
-      content="Piszemy artykuły na temat Izraela, Biblii i różne świadectwa wiary."
-    />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://poizraelsku.pl" />
-    <meta name="twitter:card" content="summary_large_image" />
-    <link rel="stylesheet" href="static/style.css" />
-    <link
-      rel="shortcut icon"
-      href="static/images/logo.svg"
-      type="image/x-icon"
-    />
-    <title>Po Izraelsku - Blog o Izraelu, Biblii i Świadectwach Wiary</title>
-    <script defer>
-      const slideShowImgs = [
-        "static/images/background-img.webp",
-        "static/images/slideshow-img3.webp",
-        "static/images/slideshow-img1.webp",
-        "static/images/slideshow-img2.webp",
-      ];
-    </script>
-    <script src="static/script.js" defer></script>
-    <script src="static/animations.js" defer></script>
-  </head>
-  <body>
-    <nav>
-      <div class="nav-top">
-        <a class="nav-logo" href="index.html"><h1>Po <img src="static/images/logo.svg" alt=""> Izraelsku</h1></a>
-        <div class="nav-toggle" onclick="toggleNav()">
-          <img class="nav-open" src="static/images/menu.svg" alt="Menu">
-          <img class="nav-close" src="static/images/close.svg" alt="Zamknij">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="description"
+    content="Piszemy artykuły na temat Izraela, Biblii i różne świadectwa. Blog Po Izraelsku - wiara, Biblia, Izrael i język hebrajski." />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="keywords" content="Izrael, Biblia, świadectwa, Jezus, wiara, hebrajski, Po Izraelsku, chrześcijaństwo" />
+  <meta name="author" content="Po Izraelsku" />
+  <meta property="og:title" content="Po Izraelsku - Blog o Izraelu, Biblii i Świadectwach" />
+  <meta property="og:description" content="Piszemy artykuły na temat Izraela, Biblii i różne świadectwa wiary." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://poizraelsku.pl" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="stylesheet" href="static/style.css" />
+  <link rel="shortcut icon" href="static/images/logo.svg" type="image/x-icon" />
+  <title>Po Izraelsku - Blog o Izraelu, Biblii i Świadectwach Wiary</title>
+  <script defer>
+    const slideShowImgs = [
+      "static/images/background-img.webp",
+      "static/images/slideshow-img3.webp",
+      "static/images/slideshow-img1.webp",
+      "static/images/slideshow-img2.webp",
+    ];
+  </script>
+  <script src="static/script.js" defer></script>
+  <script src="static/animations.js" defer></script>
+</head>
+
+<body>
+  <nav>
+    <div class="nav-top">
+      <a class="nav-logo" href="index.html">
+        <h1>Po <img src="static/images/logo.svg" alt=""> Izraelsku</h1>
+      </a>
+      <div class="nav-toggle" onclick="toggleNav()">
+        <img class="nav-open" src="static/images/menu.svg" alt="Menu">
+        <img class="nav-close" src="static/images/close.svg" alt="Zamknij">
+      </div>
+    </div>
+    <ul class="nav-links">
+      <li style="animation: topAnim 0.5s forwards ease-in-out">
+        <a class="link-item current-page" href="index.html">HOME</a>
+      </li>
+      <li style="animation: topAnim 0.5s forwards ease-in-out">
+        <a class="link-item" href="blog/index.html">BLOG</a>
+      </li>
+      <li class="logo" style="animation: topAnim 0.5s forwards ease-in-out">
+        <a href="index.html">
+          <h1>Po <img src="static/images/logo.svg" alt=""> Izraelsku</h1>
+        </a>
+      </li>
+      <li style="animation: topAnim 0.5s forwards ease-in-out">
+        <a class="link-item" href="about-us.html">O NAS</a>
+      </li>
+      <li style="animation: topAnim 0.5s forwards ease-in-out">
+        <a class="link-item" href="contact.html">KONTAKT</a>
+      </li>
+    </ul>
+  </nav>
+  <header>
+    <img src="static/images/background-img.webp" loading="eager" class="slide-img" fetchpriority="high"
+      alt="Ze względu na Syjon nie będę milczał i ze względu na Jerozolimę nie spocznę" />
+    <img style="left: 60px" class="arrows" onclick="changeBibleVerseBackward()" src="static/images/arrow-left.svg"
+      alt="Poprzedni werset" />
+    <div class="bible-verse" aria-live="polite"></div>
+    <img style="right: 0px" class="arrows" onclick="changeBibleVerseForward()" src="static/images/arrow-right.svg"
+      alt="Następny werset" />
+  </header>
+
+  <main>
+    <section id="about" aria-label="O nas">
+      <div class="right-about left-anim">
+        <h1>Czym jest Po Izraelsku?</h1>
+        <p style="text-align: justify">
+          Zajmujemy się różnymi tematami, które wszystkie związane są z naszą
+          wiarą Jezusa Mesjasza, Biblią oraz Izraelem. Jesteśmy świadomi tego,
+          jak ważny jest lud żydowski w planie Boga oraz wierzymy, że jako
+          chrześcianie jesteśmy silnie związani z Izraelem.
+        </p>
+        <a style="display: flex; text-decoration: none" href="about-us.html"><button>Czytaj więcej &rarr;</button></a>
+      </div>
+      <div class="left-about">
+        <div class="aboutus-img-container">
+          <img class="about-img" loading="lazy" src="static/images/background-img.webp"
+            alt="Jesteśmy Jaqueline i Robin." />
         </div>
       </div>
-      <ul class="nav-links">
-        <li style="animation: topAnim 0.5s forwards ease-in-out">
-          <a class="link-item current-page" href="index.html">HOME</a>
-        </li>
-        <li style="animation: topAnim 0.5s forwards ease-in-out">
-          <a class="link-item" href="blog/index.html">BLOG</a>
-        </li>
-        <li class="logo" style="animation: topAnim 0.5s forwards ease-in-out">
-          <a href="index.html"><h1>Po <img src="static/images/logo.svg" alt=""> Izraelsku</h1></a>
-        </li>
-        <li style="animation: topAnim 0.5s forwards ease-in-out">
-          <a class="link-item" href="about-us.html">O NAS</a>
-        </li>
-        <li style="animation: topAnim 0.5s forwards ease-in-out">
-          <a class="link-item" href="contact.html">KONTAKT</a>
-        </li>
-      </ul>
-    </nav>
-    <header>
-      <img
-        src="static/images/background-img.webp"
-        loading="eager"
-        class="slide-img"
-        fetchpriority="high"
-        alt="Ze względu na Syjon nie będę milczał i ze względu na Jerozolimę nie spocznę"
-      />
-      <img
-        style="left: 60px"
-        class="arrows"
-        onclick="changeBibleVerseBackward()"
-        src="static/images/arrow-left.svg"
-        alt="Poprzedni werset"
-      />
-      <div class="bible-verse" aria-live="polite"></div>
-      <img
-        style="right: 0px"
-        class="arrows"
-        onclick="changeBibleVerseForward()"
-        src="static/images/arrow-right.svg"
-        alt="Następny werset"
-      />
-    </header>
+      <div class="triangle" style="clip-path: polygon(100% 50%, 0% 100%, 100% 100%)" aria-hidden="true"></div>
+    </section>
 
-    <main>
-      <section id="about" aria-label="O nas">
-        <div class="right-about left-anim">
-          <h1>Czym jest Po Izraelsku?</h1>
-          <p style="text-align: justify">
-            Zajmujemy się różnymi tematami, które wszystkie związane są z naszą
-            wiarą Jezusa Mesjasza, Biblią oraz Izraelem. Jesteśmy świadomi tego,
-            jak ważny jest lud żydowski w planie Boga oraz wierzymy, że jako
-            chrześcianie jesteśmy silnie związani z Izraelem.
-          </p>
-          <a style="display: flex; text-decoration: none" href="about-us.html"
-            ><button>Czytaj więcej &rarr;</button></a
-          >
-        </div>
-        <div class="left-about">
-          <div class="aboutus-img-container">
-            <img
-              class="about-img"
-              loading="lazy"
-              src="static/images/background-img.webp"
-              alt="Jesteśmy Jaqueline i Robin."
-            />
+    <section id="themes" aria-label="Tematy">
+      <h1 class="top-anim">TEMATY O KTÓRYCH PISZEMY</h1>
+      <div class="theme-container">
+        <a href="themes/israel.html" class="theme-pic bottom-anim">
+          <img loading="lazy" src="static/images/theme-pic-1.webp" alt="Piszemy o rzeczach związanych z Izraelem" />
+          <div>
+            Izrael <br />
+            i język <br />
+            hebrajski
+          </div>
+        </a>
+        <a href="themes/bible.html" class="theme-pic bottom-anim">
+          <img loading="lazy" src="static/images/theme-pic-2.webp" alt="Piszemy o rzeczach związanych z Biblią" />
+          <div>BIBLIA</div>
+        </a>
+        <a href="themes/testimonies.html" class="theme-pic bottom-anim">
+          <img loading="lazy" src="static/images/theme-pic-3.webp" alt="Piszemy o świadectwach" />
+          <div style="font-size: 20px">
+            Budujące <br />
+            świadectwa i prawdziwe <br />
+            historie
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <section id="blog-suggestion" aria-label="Najnowsze wpisy">
+      <div class="img-holder">
+        <img alt="" loading="lazy" class="background-img" src="static/images/background-img.webp" />
+      </div>
+      <h1 class="top-anim blog-h1">BLOG</h1>
+      <div class="blog-container" style="margin-bottom: 0px">
+        <div class="blog-items blend-in">
+          <div class="blog-img">
+            <div class="center-text">
+              <a href="blog/rozne-imoina-boga-i-co-oznaczaja.html">czytaj</a>
+            </div>
+            <a href="blog/rozne-imoina-boga-i-co-oznaczaja.html">
+              <img class="link-img" loading="lazy"
+                src="./media/images/blog-imgs/background-img-rozne-imoina-boga-i-co-oznaczaja.webp"
+                alt="Różne imoina Boga i co oznaczają" />
+            </a>
+          </div>
+          <div class="blog-text">
+            <a href="blog/rozne-imoina-boga-i-co-oznaczaja.html">Różne imoina Boga i co oznaczają</a>
           </div>
         </div>
-        <div
-          class="triangle"
-          style="clip-path: polygon(100% 50%, 0% 100%, 100% 100%)"
-          aria-hidden="true"
-        ></div>
-      </section>
-
-      <section id="themes" aria-label="Tematy">
-        <h1 class="top-anim">TEMATY O KTÓRYCH PISZEMY</h1>
-        <div class="theme-container">
-          <a href="themes/israel.html" class="theme-pic bottom-anim">
-            <img
-              loading="lazy"
-              src="static/images/theme-pic-1.webp"
-              alt="Piszemy o rzeczach związanych z Izraelem"
-            />
-            <div>
-              Izrael <br />
-              i język <br />
-              hebrajski
+        <div class="blog-items blend-in">
+          <div class="blog-img">
+            <div class="center-text">
+              <a href="blog/wiara-posrodku-ognia.html">czytaj</a>
             </div>
-          </a>
-          <a href="themes/bible.html" class="theme-pic bottom-anim">
-            <img
-              loading="lazy"
-              src="static/images/theme-pic-2.webp"
-              alt="Piszemy o rzeczach związanych z Biblią"
-            />
-            <div>BIBLIA</div>
-          </a>
-          <a href="themes/testimonies.html" class="theme-pic bottom-anim">
-            <img
-              loading="lazy"
-              src="static/images/theme-pic-3.webp"
-              alt="Piszemy o świadectwach"
-            />
-            <div style="font-size: 20px">
-              Budujące <br />
-              świadectwa i prawdziwe <br />
-              historie
-            </div>
-          </a>
-        </div>
-      </section>
-
-      <section id="blog-suggestion" aria-label="Najnowsze wpisy">
-        <div class="img-holder">
-          <img
-            alt=""
-            loading="lazy"
-            class="background-img"
-            src="static/images/background-img.webp"
-          />
-        </div>
-        <h1 class="top-anim blog-h1">BLOG</h1>
-        <div class="blog-container" style="margin-bottom: 0px">
-          <div class="blog-items blend-in">
-            <div class="blog-img">
-              <div class="center-text">
-                <a href="blog/rozne-imoina-boga-i-co-oznaczaja.html">czytaj</a>
-              </div>
-              <a href="blog/rozne-imoina-boga-i-co-oznaczaja.html">
-                <img
-                  class="link-img"
-                  loading="lazy"
-                  src="./media/images/blog-imgs/background-img-rozne-imoina-boga-i-co-oznaczaja.webp"
-                  alt="Różne imoina Boga i co oznaczają"
-                />
-              </a>
-            </div>
-            <div class="blog-text">
-              <a href="blog/rozne-imoina-boga-i-co-oznaczaja.html"
-                >Różne imoina Boga i co oznaczają</a
-              >
-            </div>
+            <a href="blog/wiara-posrodku-ognia.html">
+              <img class="link-img" loading="lazy"
+                src="./media/images/blog-imgs/background-img-wiara-posrodku-ognia.webp"
+                alt="Wiara pośrodku ognia. Cud przed drzwiami śmierci." />
+            </a>
           </div>
-          <div class="blog-items blend-in">
-            <div class="blog-img">
-              <div class="center-text">
-                <a href="blog/wiara-posrodku-ognia.html">czytaj</a>
-              </div>
-              <a href="blog/wiara-posrodku-ognia.html">
-                <img
-                  class="link-img"
-                  loading="lazy"
-                  src="./media/images/blog-imgs/background-img-wiara-posrodku-ognia.webp"
-                  alt="Wiara pośrodku ognia. Cud przed drzwiami śmierci."
-                />
-              </a>
-            </div>
-            <div class="blog-text">
-              <a href="blog/wiara-posrodku-ognia.html"
-                >Wiara pośrodku ognia. Cud przed drzwiami śmierci.</a
-              >
-            </div>
+          <div class="blog-text">
+            <a href="blog/wiara-posrodku-ognia.html">Wiara pośrodku ognia. Cud przed drzwiami śmierci.</a>
           </div>
         </div>
-      </section>
-    </main>
-  </body>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <a href="https://www.facebook.com/profile.php?id=61578940545874" target="_blank" rel="noopener">
+      <img loading="lazy" src="./static/images/facebook.png" alt="Facebook" />
+    </a>
+    <a href="https://www.instagram.com/poizraelsku/" target="_blank" rel="noopener">
+      <img loading="lazy" src="./static/images/instagram.png" alt="Instagram" />
+    </a>
+    <a href="privacy.html">Polityka prywatności</a>
+    <p>&copy; 2026 Jaqueline and Robin Kaluzny. All Rights Reserved.</p>
+  </footer>
+</body>
+
 </html>
