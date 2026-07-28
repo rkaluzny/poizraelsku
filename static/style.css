@@ -31,6 +31,7 @@ footer {
     gap: 20px;
     align-items: center;
 }
+
 a {
     text-decoration: none;
     color: #000;
@@ -114,6 +115,10 @@ button {
 button:hover {
     background-color: #7dabe4;
     color: #f5efe6;
+}
+
+iframe {
+    width: 100%;
 }
 
 h1 {
@@ -349,7 +354,7 @@ header .bible-verse mark {
 }
 
 header p {
-    font-size: 4vw;
+    font-size: 6vw;
     text-align: center;
     -webkit-user-select: none;
     -moz-user-select: none;
@@ -384,7 +389,7 @@ header .blog-title p {
     flex-wrap: wrap;
     justify-content: center;
     align-items: end;
-    gap: 1px;
+    gap: 4px;
 }
 
 #about p {
@@ -438,6 +443,7 @@ header .blog-title p {
     align-items: center;
     flex-direction: column;
     gap: 30px;
+    text-align: center;
 }
 
 .theme-container {
@@ -509,24 +515,28 @@ header .blog-title p {
     justify-content: center;
     margin-top: 20px;
     margin-bottom: 50px;
+    width: 100%;
+    overflow: hidden;
 }
 
 .blog-container .blog-items {
     display: flex;
     flex-direction: column;
     width: 490px;
+    max-width: 95%;
     height: 500px;
-    max-width: 80%;
     box-shadow: 5px 5px 1px rgba(0, 0, 0, 0.3);
+    margin: 0 10px;
+    box-sizing: border-box;
 }
 
 .blog-container .blog-items .blog-text {
+    width: 100%;
     height: 225px;
-    width: 490px;
-    max-width: 100%;
     display: flex;
     justify-content: center;
-    font-size: 35px;
+    align-items: center;
+    font-size: clamp(20px, 5vw, 35px);
     color: rgb(0, 0, 0);
     text-align: center;
     background-color: #e8dfca;
@@ -678,96 +688,96 @@ header .blog-title p {
 /* ===== About page ===== */
 
 .about-section {
-  position: relative;
-  width: 100%;
-  min-height: 630px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-end;
-  overflow: visible;
-  font-family: "Domine";
+    position: relative;
+    width: 100%;
+    min-height: 630px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    overflow: visible;
+    font-family: "Domine";
 }
 
 .about-section::after {
-  content: '';
-  display: block;
-  width: 100%;
-  pointer-events: none;
+    content: '';
+    display: block;
+    width: 100%;
+    pointer-events: none;
 }
 
 .about-section--cream {
-  background-color: #f5efe6;
+    background-color: #f5efe6;
 }
 
 .about-section--cream::after {
-  height: 400px;
-  background-color: #cbdceb;
-  clip-path: polygon(0 100%, 100% 0, 100% 100%, 0 100%);
-  margin-top: -200px;
+    height: 400px;
+    background-color: #cbdceb;
+    clip-path: polygon(0 100%, 100% 0, 100% 100%, 0 100%);
+    margin-top: -200px;
 }
 
 .about-section--blue {
-  background-color: #cbdceb;
+    background-color: #cbdceb;
 }
 
 .about-section--blue::after {
-  height: 250px;
-  background-color: #f5efe6;
-  clip-path: polygon(0 0, 100% 100%, 100% 100%, 0 100%);
-  margin-top: -200px;
+    height: 250px;
+    background-color: #f5efe6;
+    clip-path: polygon(0 0, 100% 100%, 100% 100%, 0 100%);
+    margin-top: -200px;
 }
 
 .about-section--last::after {
-  display: none;
+    display: none;
 }
 
 .about-grid {
-  display: grid;
-  grid-template-columns: auto auto;
-  gap: 100px;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  padding: 40px 20px;
-  box-sizing: border-box;
-  position: relative;
-  z-index: 1;
-  flex: 1;
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 100px;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 40px 20px;
+    box-sizing: border-box;
+    position: relative;
+    z-index: 1;
+    flex: 1;
 }
 
 .about-grid--swap .about-image {
-  order: 2;
+    order: 2;
 }
 
 .about-grid--swap .about-text,
 .about-grid--swap .about-verse-text {
-  order: 1;
+    order: 1;
 }
 
 .about-image img {
-  height: 380px;
-  width: 300px;
-  border-radius: 300px;
-  object-fit: cover;
-  opacity: 0.7;
-  display: block;
+    height: 380px;
+    width: 300px;
+    border-radius: 300px;
+    object-fit: cover;
+    opacity: 0.7;
+    display: block;
 }
 
 .about-text {
-  width: 350px;
+    width: 350px;
 }
 
 .about-verse-text {
-  color: #1b4a85;
-  border: 1px solid #1b4a85;
-  font-size: 1.9rem;
-  padding: 10px;
-  width: 420px;
-  font-family: "Domine";
-  display: flex;
-  align-items: center;
-  height: 150px;
+    color: #1b4a85;
+    border: 1px solid #1b4a85;
+    font-size: 1.9rem;
+    padding: 10px;
+    width: 420px;
+    font-family: "Domine";
+    display: flex;
+    align-items: center;
+    height: 150px;
 }
 
 .triangle {
@@ -847,7 +857,7 @@ header .blog-title p {
 
 @media (max-width: 650px) {
     header .bible-verse p {
-        font-size: 5vw;
+        font-size: 7vw;
     }
 }
 
@@ -968,54 +978,66 @@ header .blog-title p {
 }
 
 .current-page {
-  text-decoration: underline !important;
+    text-decoration: underline !important;
 }
 
 article#blog-text-body .article-content img {
-  max-width: 100%;
-  height: auto;
-  border-radius: 8px;
-  margin: 20px 0;
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin: 20px 0;
 }
 
 @media (max-width: 860px) {
-  .about-grid {
-    grid-template-columns: 1fr;
-    gap: 20px;
-    justify-items: center;
-  }
+    .about-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        justify-items: center;
+    }
 
-  .about-image {
-    grid-row: 1;
-    display: flex;
-    justify-content: center;
-  }
+    .about-image {
+        grid-row: 1;
+        display: flex;
+        justify-content: center;
+    }
 
-  .about-text,
-  .about-verse-text { grid-row: 2; max-width: 350px; }
+    .about-text,
+    .about-verse-text {
+        grid-row: 2;
+        max-width: 350px;
+    }
 
-  .about-text {
-    width: 90%;
-    max-width: 350px;
-  }
+    .about-text {
+        width: 90%;
+        max-width: 350px;
+    }
 
-  .about-verse-text {
-    width: 90%;
-    height: auto;
-    font-size: 1.5rem;
-    padding: 15px;
-  }
+    .about-verse-text {
+        width: 90%;
+        height: auto;
+        font-size: 1.5rem;
+        padding: 15px;
+    }
 
-  .about-image img {
-    width: 250px;
-    height: 300px;
-  }
+    .about-image img {
+        width: 250px;
+        height: 300px;
+    }
+
+    .blog-container .blog-items .blog-text {
+        font-size: 25px;
+        padding: 11px;
+    }
+
+    #blog-text-body .blog-text-body-content {
+        margin: 0px 1vw;
+    }
 }
 
 @media (max-width: 650px) {
-  article#blog-text-body .article-content img {
-    width: 100% !important;
-    float: none !important;
-    margin: 10px 0;
-  }
+    article#blog-text-body .article-content img {
+        width: 100% !important;
+        float: none !important;
+        margin: 10px 0;
+    }
 }
