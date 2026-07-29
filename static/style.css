@@ -118,7 +118,7 @@ button:hover {
 }
 
 iframe {
-    width: 100%;
+    max-width: 100%;
 }
 
 h1 {
@@ -679,10 +679,14 @@ header .blog-title p {
 
 #contact {
     display: flex;
-    justify-content: center;
     align-items: center;
     flex-direction: column;
     gap: 20px;
+    min-height: 300px;
+    text-align: center;
+}
+#contact p {
+    font-family: "Domine";
 }
 
 /* ===== About page ===== */
@@ -739,6 +743,8 @@ header .blog-title p {
     justify-content: center;
     align-items: center;
     width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
     padding: 40px 20px;
     box-sizing: border-box;
     position: relative;
