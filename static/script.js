@@ -30,7 +30,7 @@ document.addEventListener("keyup", (e) => {
 let index = 0;
 
 const bibleVerses = [
-  `<p style='animation: bottomAnim 0.6s ease-in; position: relative;'>Ze względu na Syjon nie będę milczał</p><p style='animation: bottomAnim 0.6s ease-in; position: relative;'> i ze względu na Jerozolimę nie spocznę</p><p class="bible-verse-reference" style='animation: bottomAnim 0.6s ease-in; position: relative;'>Ewangelia wg św. Jana 1:5</p>`,
+  `<p style='animation: bottomAnim 0.6s ease-in; position: relative;'>Ze względu na Syjon nie będę milczał</p><p style='animation: bottomAnim 0.6s ease-in; position: relative;'> i ze względu na Jerozolimę nie spocznę</p><p class="bible-verse-reference" style='animation: bottomAnim 0.6s ease-in; position: relative;'>Księga Izajasza 62:1</p>`,
   `<p style='font-size: 1.5rem; animation: bottomAnim 0.6s ease-in; position: relative;'>Nie możemy milczeć wobec antyseminyzmu</p> <p style='animation: bottomAnim 0.6s ease-in; position: relative;'><mark>Stańmy po stronie prawdy</mark></p>`,
   `<p style='animation: bottomAnim 0.6s ease-in; position: relative;'><mark>Wy, którzy wspominacie PANA, nie milczcie;</mark> I nie dajcie mu odpoczynku, dopóki nie utwierdzi i dopóki nie uczyni Jerozolimy chwałą na ziemi.</p><p class="bible-verse-reference" style='animation: bottomAnim 0.6s ease-in; position: relative;'>Księga Izajasza 62:6-7</p>`,
   `<p style='animation: bottomAnim 0.6s ease-in; position: relative;'>I tak cały Izrael będzie zbawiony, jak jest napisane: Przyjdzie z Syjonu wybawiciel i odwróci bezbożność od Jakuba.</p> <p class="bible-verse-reference" style='animation: bottomAnim 0.6s ease-in; position: relative;'>List do Rzymian 11:26</p>`,

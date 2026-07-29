@@ -704,14 +704,16 @@ header .bible-verse .bible-verse-reference {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: flex-end;
+    justify-content: center;
     overflow: visible;
     font-family: "Domine";
 }
 
 .about-section::after {
     content: '';
-    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
     width: 100%;
     pointer-events: none;
 }
@@ -724,7 +726,6 @@ header .bible-verse .bible-verse-reference {
     height: 400px;
     background-color: #cbdceb;
     clip-path: polygon(0 100%, 100% 0, 100% 100%, 0 100%);
-    margin-top: -200px;
 }
 
 .about-section--blue {
@@ -735,7 +736,6 @@ header .bible-verse .bible-verse-reference {
     height: 250px;
     background-color: #f5efe6;
     clip-path: polygon(0 0, 100% 100%, 100% 100%, 0 100%);
-    margin-top: -200px;
 }
 
 .about-section--last::after {
@@ -748,14 +748,24 @@ header .bible-verse .bible-verse-reference {
     gap: 100px;
     justify-content: center;
     align-items: center;
-    width: 100%;
     max-width: 1100px;
     margin: 0 auto;
     padding: 40px 20px;
     box-sizing: border-box;
     position: relative;
     z-index: 1;
-    flex: 1;
+}
+
+.about-section--cream:has(.about-text) .about-grid {
+    transform: translateY(-170px);
+}
+
+.about-section--cream:has(.about-verse-text) .about-grid {
+    transform: translateY(-45px);
+}
+
+.about-section--blue:has(.about-text) .about-grid {
+    transform: translateY(-130px);
 }
 
 .about-grid--swap .about-image {
